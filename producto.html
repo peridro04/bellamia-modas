@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto | Bella Mía</title>
+    <meta name="description" content="Producto de Bella Mía.">
+    <meta name="theme-color" content="#f7f4ef">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="cabecera">
+        <div class="contenedor">
+            <a class="logo" href="index.html" aria-label="Bella Mía, ir al inicio">Bella <span>Mía</span></a>
+            <nav aria-label="Principal">
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html" aria-current="page">Tienda</a></li>
+                    <li><a href="index.html#como-pedir">Cómo pedir</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="boton-cesta" data-abrir-cesta aria-label="Abrir la cesta">
+                <span data-icono="bolsa"></span><span class="texto-cesta">Cesta</span><span class="contador" aria-hidden="true">0</span>
+            </button>
+            <button type="button" class="boton-menu" aria-expanded="false" aria-controls="menu" aria-label="Menú">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <div class="contenedor">
+            <nav class="migas cabecera-pagina" aria-label="Estás en">
+                <ol>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li id="migaSeccion"></li>
+                    <li id="migaProducto" aria-current="page"></li>
+                </ol>
+            </nav>
+            <article class="ficha" id="ficha"></article>
+        </div>
+        <section class="seccion seccion-blanca" aria-labelledby="relacionados-titulo">
+            <div class="contenedor">
+                <div class="cabecera-seccion">
+                    <h2 id="relacionados-titulo">También te puede gustar</h2>
+                </div>
+                <ul class="rejilla-productos" id="relacionados"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <p>&copy; <span class="anio">2026</span> Bella Mía · Moda y complementos</p>
+            <ul class="redes" aria-label="Redes sociales">
+                <li><a data-red="instagram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Bella Mía (se abre en otra pestaña)"><span data-icono="instagram"></span></a></li>
+                <li><a data-red="facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Bella Mía (se abre en otra pestaña)"><span data-icono="facebook"></span></a></li>
+                <li><a data-red="tiktok" href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok de Bella Mía (se abre en otra pestaña)"><span data-icono="tiktok"></span></a></li>
+                <li><a data-wa href="#" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp (se abre en otra pestaña)"><span data-icono="whatsapp"></span></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

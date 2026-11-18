@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Mía | Moda y complementos</title>
+    <meta name="description" content="Bella Mía: ropa, calzado, bolsos, bisutería, perfumes y hogar. Elige lo que te guste y pídelo por WhatsApp.">
+    <meta name="theme-color" content="#f7f4ef">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="cabecera">
+        <div class="contenedor">
+            <a class="logo" href="index.html" aria-label="Bella Mía, ir al inicio">Bella <span>Mía</span></a>
+            <nav aria-label="Principal">
+                <ul class="menu" id="menu">
+                    <li><a href="index.html" aria-current="page">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="index.html#como-pedir">Cómo pedir</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="boton-cesta" data-abrir-cesta aria-label="Abrir la cesta">
+                <span data-icono="bolsa"></span><span class="texto-cesta">Cesta</span><span class="contador" aria-hidden="true">0</span>
+            </button>
+            <button type="button" class="boton-menu" aria-expanded="false" aria-controls="menu" aria-label="Menú">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <section class="portada" aria-labelledby="titulo-portada">
+            <svg class="curvas" viewBox="0 0 1440 760" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <path d="M-40 640 C 260 520, 420 700, 720 560 S 1180 300, 1480 360" fill="none" stroke="#e9cfd6" stroke-width="22" stroke-linecap="round"/>
+                <path d="M-40 520 C 300 420, 520 600, 820 470 S 1240 220, 1500 260" fill="none" stroke="#f1e2d0" stroke-width="10" stroke-linecap="round"/>
+                <path d="M1180 -20 a 120 120 0 0 1 240 0" fill="none" stroke="#e6d9c4" stroke-width="14" stroke-linecap="round" transform="translate(0 110)"/>
+                <path d="M40 760 a 90 90 0 0 1 180 0" fill="none" stroke="#e6d9c4" stroke-width="14" stroke-linecap="round"/>
+            </svg>
+            <div class="contenedor">
+                <div>
+                    <p class="etiqueta sube">Moda y complementos</p>
+                    <h1 id="titulo-portada" class="sube sube-2">Todo lo que te gusta,<br><em>a un mensaje</em></h1>
+                    <p class="intro sube sube-3">Ropa, calzado, bolsos, bisutería, perfumes y detalles para casa. Elige, añádelo a la cesta y pídelo por WhatsApp.</p>
+                    <div class="acciones sube sube-4">
+                        <a class="boton boton-principal" href="tienda.html">Ver la tienda <span data-icono="flecha"></span></a>
+                        <a class="boton boton-borde" href="#secciones-titulo">Ver secciones</a>
+                    </div>
+                    <ul class="datos" aria-label="Bella Mía en datos">
+                        <li><strong data-total-secciones>16</strong><span>secciones</span></li>
+                        <li><strong>1 clic</strong><span>pedido por WhatsApp</span></li>
+                        <li><strong>@</strong><span data-usuario>@bellamia_modas</span></li>
+                    </ul>
+                </div>
+                <div class="mosaico" id="mosaico" aria-label="Algunas secciones de la tienda"></div>
+            </div>
+        </section>
+
+        <section class="seccion seccion-blanca" aria-labelledby="secciones-titulo">
+            <div class="contenedor">
+                <div class="cabecera-seccion">
+                    <div>
+                        <p class="etiqueta">Secciones</p>
+                        <h2 id="secciones-titulo">¿Qué estás buscando?</h2>
+                    </div>
+                    <p>Pulsa una sección para ver todo lo que tenemos.</p>
+                </div>
+                <div id="secciones"></div>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="novedades-titulo">
+            <div class="contenedor">
+                <div class="cabecera-seccion">
+                    <div>
+                        <p class="etiqueta">Recién llegado</p>
+                        <h2 id="novedades-titulo">Novedades</h2>
+                    </div>
+                    <a class="boton boton-borde" href="tienda.html">Ver toda la tienda <span data-icono="flecha"></span></a>
+                </div>
+                <ul class="rejilla-productos" id="novedades"></ul>
+            </div>
+        </section>
+
+        <section class="seccion seccion-blanca" id="como-pedir" aria-labelledby="pedir-titulo">
+            <div class="contenedor">
+                <div class="cabecera-seccion">
+                    <div>
+                        <p class="etiqueta">Fácil y sin registros</p>
+                        <h2 id="pedir-titulo">Cómo pedir</h2>
+                    </div>
+                </div>
+                <ol class="pasos">
+                    <li><h3>Elige</h3><p>Mira la tienda y escoge talla y color.</p></li>
+                    <li><h3>Añade a la cesta</h3><p>Guarda todo lo que te guste.</p></li>
+                    <li><h3>Envía por WhatsApp</h3><p>Te llega tu pedido escrito. Solo tienes que enviarlo y te contestamos.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="seccion" id="contacto" aria-labelledby="contacto-titulo">
+            <div class="contenedor">
+                <div class="visita">
+                    <div>
+                        <p class="etiqueta">Ven a vernos</p>
+                        <h2 id="contacto-titulo">Te esperamos en la tienda</h2>
+                        <p>Escríbenos para preguntar tallas, colores o si nos queda algo. Y síguenos para ver las novedades antes que nadie.</p>
+                        <p data-horario></p>
+                    </div>
+                    <ul class="contactos">
+                        <li><a data-wa href="#" target="_blank" rel="noopener noreferrer"><span data-icono="whatsapp"></span><span><strong>WhatsApp</strong><span data-tel-texto>611 567 619</span></span></a></li>
+                        <li><a data-tel href="#"><span data-icono="telefono"></span><span><strong>Llamar</strong><span data-tel-texto>611 567 619</span></span></a></li>
+                        <li><a data-red="instagram" href="#" target="_blank" rel="noopener noreferrer"><span data-icono="instagram"></span><span><strong>Instagram</strong><span data-usuario>@bellamia_modas</span></span></a></li>
+                        <li><a data-mapa href="#" target="_blank" rel="noopener noreferrer"><span data-icono="ubicacion"></span><span><strong>Cómo llegar</strong><span data-direccion>Ver en Google Maps</span></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <p>&copy; <span class="anio">2026</span> Bella Mía · Moda y complementos</p>
+            <ul class="redes" aria-label="Redes sociales">
+                <li><a data-red="instagram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Bella Mía (se abre en otra pestaña)"><span data-icono="instagram"></span></a></li>
+                <li><a data-red="facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Bella Mía (se abre en otra pestaña)"><span data-icono="facebook"></span></a></li>
+                <li><a data-red="tiktok" href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok de Bella Mía (se abre en otra pestaña)"><span data-icono="tiktok"></span></a></li>
+                <li><a data-wa href="#" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp (se abre en otra pestaña)"><span data-icono="whatsapp"></span></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

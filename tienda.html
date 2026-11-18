@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda | Bella Mía</title>
+    <meta name="description" content="Toda la tienda de Bella Mía por secciones.">
+    <meta name="theme-color" content="#f7f4ef">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700;800&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <header class="cabecera">
+        <div class="contenedor">
+            <a class="logo" href="index.html" aria-label="Bella Mía, ir al inicio">Bella <span>Mía</span></a>
+            <nav aria-label="Principal">
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="tienda.html" aria-current="page">Tienda</a></li>
+                    <li><a href="index.html#como-pedir">Cómo pedir</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="boton-cesta" data-abrir-cesta aria-label="Abrir la cesta">
+                <span data-icono="bolsa"></span><span class="texto-cesta">Cesta</span><span class="contador" aria-hidden="true">0</span>
+            </button>
+            <button type="button" class="boton-menu" aria-expanded="false" aria-controls="menu" aria-label="Menú">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="contenido">
+        <section class="cabecera-pagina" aria-labelledby="tituloTienda">
+            <div class="contenedor">
+                <p class="etiqueta">Tienda</p>
+                <h1 id="tituloTienda">Toda la tienda</h1>
+                <p>Filtra por sección. Pulsa en un producto para ver tallas y colores.</p>
+            </div>
+        </section>
+        <nav class="filtros" aria-label="Secciones de la tienda">
+            <div class="contenedor">
+                <ul id="filtros"></ul>
+            </div>
+        </nav>
+        <section class="contenedor" aria-labelledby="tituloProductos">
+            <h2 class="visualmente-oculto" id="tituloProductos">Productos</h2>
+            <p class="resultado" id="resultado" role="status" aria-live="polite"></p>
+            <ul class="rejilla-productos" id="listaProductos"></ul>
+        </section>
+        <div class="seccion"></div>
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <p>&copy; <span class="anio">2026</span> Bella Mía · Moda y complementos</p>
+            <ul class="redes" aria-label="Redes sociales">
+                <li><a data-red="instagram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Bella Mía (se abre en otra pestaña)"><span data-icono="instagram"></span></a></li>
+                <li><a data-red="facebook" href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Bella Mía (se abre en otra pestaña)"><span data-icono="facebook"></span></a></li>
+                <li><a data-red="tiktok" href="#" target="_blank" rel="noopener noreferrer" aria-label="TikTok de Bella Mía (se abre en otra pestaña)"><span data-icono="tiktok"></span></a></li>
+                <li><a data-wa href="#" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp (se abre en otra pestaña)"><span data-icono="whatsapp"></span></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/catalogo.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
